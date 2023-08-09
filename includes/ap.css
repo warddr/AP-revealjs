@@ -1,0 +1,32 @@
+
+.content{
+    background-image: url("content.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: auto 35%;
+}
+
+.title{
+    background-color: #ae0f0a;
+    background-image: url("front.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: auto 50%;
+}
+
+.title h1,
+.title h2,
+.title h3,
+.title h4,
+.title p{
+    color:white;
+    font-family: 'Century Gothic, sans-serif';
+    text-transform: none;
+}
+
+.slides h1,
+.slides h2,
+.slides h3,
+.slides h4{
+    text-transform: none;
+}
