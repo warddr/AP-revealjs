@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>AP revealjs template</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/warddr/AP-revealjs/includes/ap.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-state="title">
+					<h1>Naam van het vak</h1>
+					<h2>inhoud van de les</h2>
+					<p>lector</p>
+					<p><small>datum</small></p>
+				</section>
+
+				<section data-state="content">
+					<h2>Info over de template</h2>
+					<ul>
+						<li>alle includes komen van CDN's</li>
+						<li>je hebt dus enkel deze HTML file nodig</li>
+						<li>libraries offline gebruiken kan natuurlijk ook altijd!</li>
+					</ul>
+				</section>
+
+				<section data-state="content">
+					<h2>Inhoud</h2>
+					<ul>
+						<li>onderwerp 1</li>
+						<li>onderwerp 2</li>
+						<li>onderwerp 3</li>
+					</ul>
+				</section>
+
+				<section data-state="content">
+					<h2>Wiskundige formule?</h2>
+					<p>Example formula:</p>
+					<p>\[
+							\int_{-\infty}^{\infty} e^{-\pi x^2}\,dx = 1.
+						\]</p>
+				</section>
+
+				<section data-state="content">
+					<h2>Ook leuk om code weer te geven</h2>
+					<p>in dit voorbeeld met nadruk op lijn 1 en 8</p>
+					<pre><code data-line-numbers="1, 8">def fibonacci(n):
+	"""Return Fibonacci sequence up to n."""
+	result = []
+	a, b = 0, 1
+	while a < n:
+		result.append(a)
+		a, b = b, a+b
+	return result
+
+if __name__ == "__main__":
+	num = int(input("Enter a number: "))
+	fib_sequence = fibonacci(num)
+	print(f"Fibonacci sequence up to {num}: {fib_sequence}")
+					</code></pre>
+					<p>meer leuke dingen met code vind je <a href="https://revealjs.com/code/">hier</a></p>
+					
+				</section>
+
+				<section data-auto-animate>
+					<h1>meer fancy code</h1>
+					<pre data-id="code-animation"><code data-trim data-line-numbers>
+					  let planets = [
+						{ name: 'mars', diameter: 6779 },
+					  ]
+					</code></pre>
+				  </section>
+				  <section data-auto-animate>
+					<h1>meer fancy code</h1>
+					<pre data-id="code-animation"><code data-trim data-line-numbers>
+					  let planets = [
+						{ name: 'mars', diameter: 6779 },
+						{ name: 'earth', diameter: 12742 },
+						{ name: 'jupiter', diameter: 139820 }
+					  ]
+					</code></pre>
+				  </section>
+				  <section data-auto-animate>
+					<h1>meer fancy code</h1>
+					<pre data-id="code-animation"><code data-trim data-line-numbers>
+					  let circumferenceReducer = ( c, planet ) => {
+						return c + planet.diameter * Math.PI;
+					  }
+				  
+					  let planets = [
+						{ name: 'mars', diameter: 6779 },
+						{ name: 'earth', diameter: 12742 },
+						{ name: 'jupiter', diameter: 139820 }
+					  ]
+				  
+					  let c = planets.reduce( circumferenceReducer, 0 )
+					</code></pre>
+				  </section>
+
+
+				<section data-state="content" class="fragments">
+					<h1>lijn per lijn</h1>
+					<ul>
+						<li class="fragment highlight-red">lijn</li>
+						<li class="fragment">per lijn</li>
+						<li class="fragment">en veel meer <a href="https://revealjs.com/fragments/"> info hier</a></li>
+					</ul>
+				</section>
+
+				<section data-state="content">
+					<h3>En zoveel meer</h3>
+					<ul>
+						<li><a href="https://revealjs.com">revealjs.com</a></li>
+					</ul>
+				</section>
+
+				<section data-state="content">
+					<h3>Over de AP template</h3>
+					<ul>
+						<li><a href="https://github.com/warddr/AP-revealjs">github/warddr/AP-revealjs</a></li>
+						<li>Maak gerust pull-requests!</li>
+						<ul>
+							<li>om de template te verbeteren</li>
+							<li>of met leuke voorbeeldjes</li>
+						</ul>
+					</ul>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+                                controls: true,
+                                progress: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ],
+				
+			});
+		</script>
+	</body>
+</html>
